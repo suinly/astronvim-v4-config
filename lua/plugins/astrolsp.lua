@@ -30,10 +30,12 @@ return {
       disabled = { -- disable formatting capabilities for the listed language servers
         -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
         -- "lua_ls",
-        "volar",
         "tsserver",
+        "volar",
+        "vtsls",
+        "eslint",
       },
-      timeout_ms = 1000, -- default format timeout
+      timeout_ms = 5000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
       --   return true
       -- end
@@ -46,14 +48,19 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
-      volar = {
-        filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
-        init_options = {
-          vue = {
-            hybridMode = false,
-          },
-        },
-      },
+      -- tsserver = {
+      --   init_options = {
+      --     plugins = {
+      --       {
+      --         name = "@vue/typescript-plugin",
+      --         location = "",
+      --         -- If .vue file cannot be recognized in either js or ts file try to add `typescript` and `javascript` in languages table.
+      --         languages = { "vue", "typescript", "javascript" },
+      --       },
+      --     },
+      --   },
+      --   filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+      -- },
     },
     -- customize how language servers are attached
     handlers = {
