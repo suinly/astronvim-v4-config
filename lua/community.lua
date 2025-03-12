@@ -8,10 +8,9 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.php" },
+  { import = "astrocommunity.pack.blade" },
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.typescript" },
-  { import = "astrocommunity.pack.blade" },
-  { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.editing-support.chatgpt-nvim" },
   { import = "astrocommunity.completion.codeium-vim" },
+  { import = "astrocommunity.colorscheme.catppuccin" },
 }
