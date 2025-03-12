@@ -29,7 +29,9 @@ return {
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
-        wrap = false, -- sets vim.opt.wrap
+        wrap = true, -- sets vim.opt.wrap
+        colorcolumn = "80", -- sets vim.opt.colorcolumn
+        conceallevel = 0, -- sets vim.opt.conceallevel
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -63,6 +65,8 @@ return {
         -- quick save
         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
         ["<Leader>r"] = { ":LspRestart<cr>", desc = "Restart LSP" },
+        --
+        ["<Leader>fO"] = { ":ObsidianQuickSwitch<cr>", desc = "Obsidian Quick Switch" },
       },
       t = {
         -- setting a mapping to false will disable it
